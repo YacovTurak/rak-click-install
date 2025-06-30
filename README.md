@@ -17,7 +17,7 @@
 
 ## 💾 הורדה
 
-[⬇️ לחץ כאן להורדת הגרסה האחרונה](https://github.com/USERNAME/rak-click-install/releases/latest)
+[⬇️ לחץ כאן להורדת הגרסה האחרונה](https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.0/_1.0.0_x64-setup.exe)
 
 > הקובץ מכיל את תוכנת ההתקנה של רקליק (`.exe`). ייתכן שהדפדפן או Windows יתריעו כי מדובר בקובץ הפעלה לא חתום – ניתן לאשר ולהתקין.
 
