@@ -18,11 +18,11 @@
 
 🖱️ להורדת תוכנת ההתקנה של רקליק:
 
-- 🔹 [הורדת קובץ התקנה ישיר (EXE)](https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.0/rak-click_1.0.0_x64-setup.exe)
+- 🔹 [הורדת קובץ התקנה ישיר (EXE)](https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.1/rak-click_1.0.1_x64-setup.exe)
 
 > ייתכן שהדפדפן או האנטי־וירוס יתריעו או יחסמו את ההורדה – זה קובץ בטוח. אם ההורדה לא מצליחה, נסה את האפשרות הבאה:
 
-- 🔸 [הורדת קובץ ZIP עם ההתקנה](https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.0/rak-click_1.0.0_x64-setup.zip)
+- 🔸 [הורדת קובץ ZIP עם ההתקנה](https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.1/rak-click_1.0.1_x64-setup.zip)
 
 ---
 
