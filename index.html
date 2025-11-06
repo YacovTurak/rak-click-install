@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>רקליק – ניהול שעות ותשלומים בלחיצה</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap');
+
+    :root {
+      --blue: #0078d7;
+      --dark-blue: #0055a5;
+      --green: #00a757;
+      --bg: #f5f7fa;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Heebo', sans-serif;
+      direction: rtl;
+      text-align: right;
+      background: var(--bg);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* === HERO === */
+    header {
+      background: linear-gradient(135deg, rgba(0,85,165,0.9), rgba(0,120,215,0.9)),
+                  url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.25);
+      z-index: 0;
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 1.3em;
+      margin: 20px auto 40px;
+      max-width: 600px;
+      opacity: 0.9;
+    }
+
+    .hero-btn {
+      display: inline-block;
+      padding: 15px 35px;
+      background: var(--green);
+      color: white;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .hero-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(40px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* === FEATURES === */
+    section.features {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .feature {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .feature h3 {
+      color: var(--blue);
+      margin-top: 0;
+    }
+
+    .feature::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(to bottom, var(--blue), var(--green));
+      border-radius: 0 16px 16px 0;
+    }
+
+    /* === DOWNLOAD SECTION === */
+    section.download {
+      background: linear-gradient(135deg, var(--blue), var(--dark-blue));
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .download h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .download a {
+      display: inline-block;
+      margin: 10px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .download a.primary {
+      background: var(--green);
+      color: white;
+    }
+
+    .download a.secondary {
+      background: white;
+      color: var(--dark-blue);
+    }
+
+    .download a:hover {
+      transform: scale(1.08);
+    }
+
+    /* === CONTACT === */
+    section.contact {
+      max-width: 900px;
+      margin: 80px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    section.contact p {
+      font-size: 1.1em;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="content">
+    <h1>רקליק</h1>
+    <p>תוכנה חכמה שמנהלת עבורך שעות עבודה, תשלומים ולקוחות – בקליק אחד בלבד.</p>
+    <a href="#download" class="hero-btn">הורד עכשיו</a>
+  </div>
+</header>
+
+<section class="features">
+  <div class="feature">
+    <h3>התחלה בלחיצה</h3>
+    <p>התחל לעצמך מד זמן עבודה בלחיצה אחת – בלי דפים, בלי בלגן. רק קליק אחד.</p>
+  </div>
+  <div class="feature">
+    <h3>הכול במקום אחד</h3>
+    <p>כל הלקוחות, הפרויקטים והשעות שלך – מנוהלים אוטומטית במסך אחד מסודר וברור.</p>
+  </div>
+  <div class="feature">
+    <h3>חישוב תשלום מיידי</h3>
+    <p>קבע תעריפים שונים ללקוחות, ורקליק תחשב עבורך כמה מגיע לך בדיוק.</p>
+  </div>
+  <div class="feature">
+    <h3>ייצוא לאקסל</h3>
+    <p>בלחיצה אחת הפק דוח שעות וחשבונית מסודרת לקובץ Excel מקצועי.</p>
+  </div>
+</section>
+
+<section id="download" class="download">
+  <h2>הורדה והתקנה</h2>
+  <p>בחר באחת האפשרויות להורדה:</p>
+  <a href="https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.1/rak-click_1.0.1_x64-setup.exe" class="primary">הורדה ישירה (EXE) - זוהי האפשרות המועדפת</a>
+    <p>ייתכן שהדפדפן או האנטי־וירוס יתריעו או יחסמו את ההורדה – זה קובץ בטוח.<br />אם ההורדה בכל זאת נחסמת, נסה את האפשרות הבאה:</p>
+  <a href="https://github.com/YacovTurak/rak-click-install/releases/download/v1.0.1/rak-click_1.0.1_x64-setup.zip" class="secondary">הורדת קובץ ZIP</a>
+  <p style="margin-top:20px; font-size:1.4em; opacity:0.8;">בעת ההתקנה - אם Windows מציג אזהרה – לחץ “מידע נוסף” ← “הפעל בכל זאת”.</p>
+</section>
+
+<section class="contact">
+  <h2>צרו קשר</h2>
+  <p>שאלות, הצעות או בקשות מיוחדות? כתבו לי לכתובת:</p>
+  <p><a href="mailto:0018758@gmail.com">0018758@gmail.com</a></p>
+</section>
+
+<footer>
+  <p>&copy; 2025 רקליק – כל הזכויות שמורות</p>
+  <p><a href="https://github.com/YacovTurak/rak-click-install" target="_blank">לעמוד GitHub של הפרויקט</a></p>
+</footer>
+
+</body>
+</html>
