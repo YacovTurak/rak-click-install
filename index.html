@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>רקליק – ניהול שעות ותשלומים בלחיצה</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600;800&display=swap');
 
@@ -104,6 +105,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
       position: relative;
       overflow: hidden;
+      cursor: pointer;
     }
 
     .feature:hover {
@@ -194,7 +196,29 @@
       text-decoration: underline;
     }
 
-  </style>
+/* === תיקון CSS להצגת אייקון ליד הכותרת ויישור לאמצע === */
+/* עיצוב האייקון בתוך הפיצ'ר */
+.feature i {
+ color: var(--green);
+ font-size: 1.8em; /* הגדלה קלה לאייקון */
+ margin-left: 10px; /* רווח משמאל לכותרת */
+ display: inline-block;
+ vertical-align: middle; /* יישור לאמצע */
+}
+
+.feature h3 {
+ display: inline-block;
+ color: var(--blue);
+ margin-top: 0;
+ vertical-align: middle; /* יישור לאמצע */
+ font-size: 1.4rem;
+}
+
+.feature-header {
+  display: flex;
+  gap: 5px;
+}
+</style>
 </head>
 <body>
 
@@ -208,20 +232,46 @@
 
 <section class="features">
   <div class="feature">
-    <h3>התחלה בלחיצה</h3>
+    <div class="feature-header">
+      <i class="fa-solid fa-hand-pointer"></i>
+      <h3>התחלה בלחיצה</h3>
+    </div>
     <p>התחל לעצמך מד זמן עבודה בלחיצה אחת – בלי דפים, בלי בלגן. רק קליק אחד.</p>
   </div>
   <div class="feature">
-    <h3>הכול במקום אחד</h3>
+    <div class="feature-header">
+      <i class="fa-solid fa-box-archive"></i>
+      <h3>הכול במקום אחד</h3>
+    </div>
     <p>כל הלקוחות, הפרויקטים והשעות שלך – מנוהלים אוטומטית במסך אחד מסודר וברור.</p>
   </div>
   <div class="feature">
-    <h3>חישוב תשלום מיידי</h3>
+    <div class="feature-header">
+      <i class="fa-solid fa-sack-dollar"></i>
+      <h3>חישוב תשלום מיידי</h3>
+    </div>
     <p>קבע תעריפים שונים ללקוחות, ורקליק תחשב עבורך כמה מגיע לך בדיוק.</p>
   </div>
   <div class="feature">
-    <h3>ייצוא לאקסל</h3>
-    <p>בלחיצה אחת הפק דוח שעות וחשבונית מסודרת לקובץ Excel מקצועי.</p>
+    <div class="feature-header">
+      <i class="fa-solid fa-file-excel"></i>
+      <h3>ייצוא לאקסל</h3>
+    </div>
+    <p>בלחיצה אחת הפק דוח שעות לכל לקוח ולכל פרויקט לקובץ Excel מקצועי.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-header">
+      <i class="fa-solid fa-list-check"></i>
+      <h3>מעקב ממוקד פרויקט</h3>
+    </div>
+    <p>נהל שעות בנפרד לכל פרויקט והגדר סטטוסים (פעיל, מושהה, הסתיים) לשליטה מלאה על העבודה שלך.</p>
+  </div>
+  <div class="feature">
+    <div class="feature-header">
+    <i class="fa-solid fa-face-grin-stars"></i>
+    <h3>מצב רוח טוב בעבודה</h3>
+    </div>
+    <p>התוכנה משלבת משפטים מצחיקים ושנונים כדי לשמור על אנרגיה חיובית והנאה במהלך יום העבודה שלך.</p>
   </div>
 </section>
 
@@ -244,6 +294,5 @@
   <p>&copy; 2025 רקליק – כל הזכויות שמורות</p>
   <p><a href="https://github.com/YacovTurak/rak-click-install" target="_blank">לעמוד GitHub של הפרויקט</a></p>
 </footer>
-
 </body>
 </html>
